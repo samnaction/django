@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+    {{month}}
+{% endblock  %}
+
+    
+{% block content %}
+    <h1>{{ text }}::{{month}}</h1>
+    {%if text is not None%}
+        <h1>{{ text }}::{{month|title}}</h1> <!--filters in django-->
+    {%else%}
+        <p> There is no challenge for this month</p>
+    {% endif %}
+{% endblock  %}
